@@ -12,7 +12,24 @@ test('create file',async ()=>{
 })
 
 test('read file',async ()=>{
-  const file = await io.readFile('./')
+  const file = await io.readFile('./unit_test/mock_index.html');
+  const html = cheerio.load(file);
+
+  expect( html('title').text() ).toBe('Mock File');
+})
+
+test('write file',async ()=>{
+  const file = await io.readFile('./unit_test/mock_index.html');
+  const html = cheerio.load(file);
+
+  html('title').text('Esa Hidayah');
+
+  const writeFile = await io.writeFile('./unit_test/mock_index_2.html',html.html());
+  const newFile = await io.readFile('./unit_test/mock_index_2.html');
+  const newHtml = cheerio.load(newFile);
+
+  expect( newHtml('title').text() ).toBe('Esa Hidayah');
+  await io.deleteFile( './unit_test/mock_index_2.html');
 })
 
 test('delete file',async ()=>{

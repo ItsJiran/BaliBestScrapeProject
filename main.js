@@ -18,7 +18,7 @@ const timestamp = new Date();
 const main = async () => {
   try{
     const Scrapper = new scrape.Scrapper(); 
-    const fetchHome = await Scrapper.fetch({url:'http://localhost:8080'});
+    const fetchHome = await Scrapper.fetch({url:'http://localhost:5000'});
 
     console.log(fetchHome.response.data);
     const $home = cheerio.load(fetchHome.response.data);

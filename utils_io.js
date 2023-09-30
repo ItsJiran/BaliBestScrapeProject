@@ -1,4 +1,4 @@
-
+const pather = require('path');
 const fs = require('fs');
 
 function path(path){
@@ -6,12 +6,12 @@ function path(path){
 }
 async function deleteFile(path){
 	if(await checkFileExist(path)) {
-    await fs.promises.rm(path,{recursive:true,force:true}, (err)=>{console.log(err);return err})
+    await fs.promises.rm(path,{recursive:true,force:true})
   }
 }
 async function deleteFolder(path){
 	if(await checkFolderExist(path)) { 
-    await fs.promises.rm(path,{recursive:true,force:true}, (err)=>{console.log(err);return err})
+    await fs.promises.rm(path,{recursive:true,force:true})
   };
 }
 async function createFolder(path){
@@ -26,7 +26,6 @@ async function createFile(path,content=''){
 async function checkFolderExist(path){
   try{
     const response = await fs.promises.access(path);
-    console.log(response);
     return true;
   } catch(err){
     if(err.code == 'ENOENT') return false;
@@ -36,7 +35,6 @@ async function checkFolderExist(path){
 async function checkFileExist(path){
   try{
     const response = await fs.promises.access(path);
-    console.log(response);
     return true;
   } catch(err){
     if(err.code == 'ENOENT') return false;
@@ -46,9 +44,19 @@ async function checkFileExist(path){
 async function writeFile(path,content=''){
   await fs.promises.writeFile(path,content,(err)=>{return err});
 }
+async function readFile(path,encoding){
+  if(encoding == undefined){
+    if(pather.extname(path) == '.jpg' || pather.extname(path) == '.png') encoding = '';
+    else                                                                 encoding = 'utf8'
+  }
+  
+  if(await checkFileExist(path)) return await fs.promises.readFile(path,encoding);
+  else                           return 'file not exist';
+}
 
 module.exports = {
   path:path,
+  readFile:readFile,
   createFolder:createFolder,
   createFile:createFile,
   writeFile:writeFile,

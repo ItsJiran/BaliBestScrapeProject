@@ -55,9 +55,9 @@ class Scrapper{
     var config = {};
 
     if(obj.config == undefined) config = {responseType:'blob'};
-    else                        config = {...obj.config, responseType:'blob'};
+    else                        config = {responseType:'blob',...obj.config};
 
-    return await this.fetch(obj.url, config); 
+    return await this.fetch(obj, config); 
   }
 }
 
