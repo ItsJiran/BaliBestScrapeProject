@@ -8,9 +8,13 @@ class Scrapper{
     if(object.axios !== undefined) this.axios = object.axios;
     else                           this.axios = axios;
 
+    if(object.baseUrl !== undefined) this.baseUrl = object.baseUrl;
+
     this.defaultConfig = {
       method:'get',
-      headers:{},
+      headers:{
+        
+      },
     }
     this.query = {
       success:[],
@@ -29,7 +33,8 @@ class Scrapper{
     if(obj.config == undefined) config = {...this.defaultConfig};
     else                        config = {...this.defaultConfig, ...obj.config};
 
-    config.url = obj.url;
+    if(this.baseUrl == undefined) config.url = obj.url;
+    else                          config.url = this.baseUrl + '/' + obj.url;
 
     let fetch = {
       status:0,

@@ -2,7 +2,7 @@
 const axios = require('axios')
 const cheerio = require('cheerio');
 
-const io = require('../utils_io');
+const io = require('../utils.io');
 const scrape = require('../scrape.js');
 const MockAdapter = require('axios-mock-adapter');
 

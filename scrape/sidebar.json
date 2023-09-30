@@ -1,0 +1,434 @@
+{
+    "type": "tag",
+    "name": "div",
+    "id": "nav_menu-2",
+    "class": "mg-widget widget_nav_menu",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "children": [
+        {
+            "type": "tag",
+            "name": "div",
+            "class": "mg-wid-title",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "tag",
+                    "name": "h6",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "Bali Full Day Tour"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tag",
+            "name": "div",
+            "class": "menu-bali-full-day-tours-container",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "tag",
+                    "name": "ul",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-handara-gate-tour-package",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Bali Handara Gate Tour Package"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-tour-package-bali-handara-gate",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Bali Tour Package Bali Handara Gate"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/east-bali-tour-package",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "East Bali Tour Package"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-full-day-tour/bali-dolpin-tours",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Bali Dolphin Tours"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-half-day-tour/bali-ubud-tours",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Bali Ubud Tours"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-full-day-tour/north-bali-tours",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "North Bali Tours"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-full-day-tour/kintamani-tour",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Kintamani Tour"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-full-day-tour/bedugul-and-tanah-lot-tours",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Bedugul and Tanah Lot Tours"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-full-day-tour/kintamani-and-ubud-tours",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Kintamani and Ubud Tours"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-full-day-tour/besakih-temple-tours",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Besakih Temple Tours"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-full-day-tour/denpasar-and-uluwatu-tours",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Denpasar and Uluwatu Tours"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-full-day-tour/denpasar-and-tanah-lot-temple-tours",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Denpasar and Tanah Lot Temple Tours"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-full-day-tour/ubud-and-uluwatu-tours",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Ubud and Uluwatu Tours"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-full-day-tour/ubud-and-tanah-lot-tour",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Ubud and Tanah Lot Tours"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/banyumala-waterfall-tour",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "BANYUMALA WATERFALL TOUR"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/bali-full-day-tour/lempuyang-temple-tour-package",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "LEMPUYANG TEMPLE TOUR PACKAGE"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        },
+                        {
+                            "type": "tag",
+                            "name": "li",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": [
+                                {
+                                    "type": "tag",
+                                    "name": "a",
+                                    "href": "https://www.balibestactivities.com/jatiluwih-tour-package",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "JATILUWIH TOUR PACKAGE"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "data": "\n"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

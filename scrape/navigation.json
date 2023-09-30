@@ -1,0 +1,166 @@
+{
+    "type": "tag",
+    "name": "ul",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "children": [
+        {
+            "type": "tag",
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "tag",
+                    "name": "a",
+                    "href": "https://www.balibestactivities.com",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "tag",
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tag",
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "tag",
+                    "name": "a",
+                    "href": "https://www.balibestactivities.com/",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "Home"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "data": "\n"
+        },
+        {
+            "type": "tag",
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "tag",
+                    "name": "a",
+                    "href": "https://www.balibestactivities.com/about-us",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "About Us"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "data": "\n"
+        },
+        {
+            "type": "tag",
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "tag",
+                    "name": "a",
+                    "href": "https://www.balibestactivities.com/bali-tours",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "BALI TOURS"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "data": "\n"
+        },
+        {
+            "type": "tag",
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "tag",
+                    "name": "a",
+                    "href": "https://www.balibestactivities.com/",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "BALI ACTIVITIES"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "data": "\n"
+        },
+        {
+            "type": "tag",
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "tag",
+                    "name": "a",
+                    "href": "https://www.balibestactivities.com/bali-airport-transfer",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "Bali Airport Transfer"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "data": "\n"
+        },
+        {
+            "type": "tag",
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "tag",
+                    "name": "a",
+                    "href": "https://www.balibestactivities.com/booking-contact",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "Booking & Contact"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "data": "\n"
+        }
+    ]
+}

@@ -1,40 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1696041448072" clover="3.2.0">
-  <project timestamp="1696041448073" name="All files">
-    <metrics statements="48" coveredstatements="34" conditionals="39" coveredconditionals="14" methods="18" coveredmethods="11" elements="105" coveredelements="59" complexity="0" loc="48" ncloc="48" packages="1" files="2" classes="2"/>
+<coverage generated="1696045686053" clover="3.2.0">
+  <project timestamp="1696045686054" name="All files">
+    <metrics statements="54" coveredstatements="44" conditionals="48" coveredconditionals="24" methods="16" coveredmethods="12" elements="118" coveredelements="80" complexity="0" loc="54" ncloc="54" packages="1" files="2" classes="2"/>
     <file name="scrape.js" path="/run/media/itsjiran/HDD 1 Terra Boys/Folder Gilang/Folder Project Karya/Project Coding/Folder Project/230928_WebscrapingBali/scrape.js">
-      <metrics statements="24" coveredstatements="15" conditionals="22" coveredconditionals="6" methods="5" coveredmethods="3"/>
+      <metrics statements="26" coveredstatements="21" conditionals="26" coveredconditionals="12" methods="5" coveredmethods="4"/>
       <line num="2" count="1" type="stmt"/>
       <line num="8" count="2" type="cond" truecount="1" falsecount="1"/>
       <line num="9" count="2" type="stmt"/>
-      <line num="11" count="2" type="stmt"/>
-      <line num="15" count="2" type="stmt"/>
-      <line num="24" count="2" type="cond" truecount="2" falsecount="2"/>
-      <line num="25" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="27" count="2" type="stmt"/>
+      <line num="11" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="13" count="2" type="stmt"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="28" count="2" type="cond" truecount="2" falsecount="2"/>
       <line num="29" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="30" count="0" type="stmt"/>
-      <line num="32" count="2" type="stmt"/>
-      <line num="34" count="2" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="33" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="34" count="0" type="stmt"/>
+      <line num="36" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="37" count="0" type="stmt"/>
       <line num="39" count="2" type="stmt"/>
-      <line num="41" count="2" type="stmt"/>
-      <line num="45" count="0" type="stmt"/>
-      <line num="46" count="0" type="stmt"/>
-      <line num="49" count="2" type="stmt"/>
-      <line num="52" count="0" type="cond" truecount="0" falsecount="4"/>
-      <line num="53" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="55" count="0" type="stmt"/>
-      <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="58" count="0" type="stmt"/>
-      <line num="60" count="0" type="stmt"/>
-      <line num="64" count="1" type="stmt"/>
+      <line num="44" count="2" type="stmt"/>
+      <line num="46" count="2" type="stmt"/>
+      <line num="50" count="0" type="stmt"/>
+      <line num="51" count="0" type="stmt"/>
+      <line num="54" count="2" type="stmt"/>
+      <line num="57" count="1" type="cond" truecount="2" falsecount="2"/>
+      <line num="58" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="60" count="1" type="stmt"/>
+      <line num="62" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="63" count="0" type="stmt"/>
+      <line num="65" count="1" type="stmt"/>
+      <line num="69" count="1" type="stmt"/>
     </file>
-    <file name="utils_io.js" path="/run/media/itsjiran/HDD 1 Terra Boys/Folder Gilang/Folder Project Karya/Project Coding/Folder Project/230928_WebscrapingBali/utils_io.js">
-      <metrics statements="24" coveredstatements="19" conditionals="17" coveredconditionals="8" methods="13" coveredmethods="8"/>
+    <file name="utils.io.js" path="/run/media/itsjiran/HDD 1 Terra Boys/Folder Gilang/Folder Project Karya/Project Coding/Folder Project/230928_WebscrapingBali/utils.io.js">
+      <metrics statements="28" coveredstatements="23" conditionals="22" coveredconditionals="12" methods="11" coveredmethods="8"/>
+      <line num="1" count="2" type="stmt"/>
       <line num="2" count="2" type="stmt"/>
       <line num="5" count="0" type="stmt"/>
-      <line num="8" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="9" count="2" type="stmt"/>
+      <line num="8" count="3" type="cond" truecount="1" falsecount="1"/>
+      <line num="9" count="3" type="stmt"/>
       <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
       <line num="14" count="1" type="stmt"/>
       <line num="18" count="1" type="cond" truecount="1" falsecount="1"/>
@@ -46,15 +49,18 @@
       <line num="29" count="2" type="stmt"/>
       <line num="31" count="2" type="cond" truecount="1" falsecount="1"/>
       <line num="32" count="0" type="stmt"/>
-      <line num="36" count="10" type="stmt"/>
-      <line num="37" count="10" type="stmt"/>
-      <line num="38" count="8" type="stmt"/>
+      <line num="36" count="13" type="stmt"/>
+      <line num="37" count="13" type="stmt"/>
+      <line num="38" count="11" type="stmt"/>
       <line num="40" count="2" type="cond" truecount="1" falsecount="1"/>
       <line num="41" count="0" type="stmt"/>
-      <line num="45" count="2" type="stmt"/>
-      <line num="48" count="5" type="cond" truecount="1" falsecount="1"/>
-      <line num="49" count="0" type="stmt"/>
-      <line num="52" count="2" type="stmt"/>
+      <line num="45" count="3" type="stmt"/>
+      <line num="48" count="7" type="cond" truecount="1" falsecount="1"/>
+      <line num="49" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="50" count="4" type="stmt"/>
+      <line num="53" count="7" type="cond" truecount="1" falsecount="1"/>
+      <line num="54" count="0" type="stmt"/>
+      <line num="57" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>
