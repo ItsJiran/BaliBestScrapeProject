@@ -32,17 +32,36 @@ async function initialize(){
   fetchHome = await scrapper.fetch({url:''});
   $ = await cheerio.load( await io.readFile('./index.html'));
 
-
-  if(await io.checkFolderExist( io.path('scrape/articles') ) == true)              await io.deleteFolder( io.path('scrape/articles') );
-  if(await io.checkFolderExist( io.path('scrape/images') ) == true)                await io.deleteFolder( io.path('scrape/images') );
+  if(await io.checkFolderExist( io.path('scrape/articles') ) == true)        await io.deleteFolder( io.path('scrape/articles') );
     
   // CREATE FOLDER
-  if(await io.checkFolderExist( io.path('scrape') ) == false)                       await io.createFolder( io.path('scrape') );
-  if(await io.checkFolderExist( io.path('scrape/articles') ) == false)              await io.createFolder( io.path('scrape/articles') );
-  if(await io.checkFolderExist( io.path('scrape/articles/index') ) == false)        await io.createFolder( io.path('scrape/articles/index') );
-  if(await io.checkFolderExist( io.path('scrape/images') ) == false)                await io.createFolder( io.path('scrape/images') );
-  if(await io.checkFolderExist( io.path('scrape/images/articles') ) == false)       await io.createFolder( io.path('scrape/images/articles') );
-  if(await io.checkFolderExist( io.path('scrape/images/articles/index') ) == false) await io.createFolder( io.path('scrape/images/articles/index') );
+  if(await io.checkFolderExist( io.path('scrape') ) == false)                await io.createFolder( io.path('scrape') );
+  if(await io.checkFolderExist( io.path('scrape/articles') ) == false)       await io.createFolder( io.path('scrape/articles') );
+  if(await io.checkFolderExist( io.path('scrape/articles/index') ) == false) await io.createFolder( io.path('scrape/articles/index') );
+}
+
+function getSlugEnd(url){
+  if(!isSlug(url)) throw new Error('esa');
+  var tmp = url.replaceAll(baseUrl,'').split('/');
+  return tmp[tmp.length-1];
+}
+function getSlug(url){
+  if(!isSlug(url)) throw new Error('esa');
+  var tmp = url.replaceAll(baseUrl,'').split('/');
+  var str = '';
+
+  for(let i = 0; i < tmp.length - 1; i++){
+    str += tmp[i] + '/';
+  }
+
+  return str;  
+}
+function isSlug(url){
+  var tmp = url.replaceAll(baseUrl,'').split('/');
+  return tmp.length > 1;
+}
+function cleanUrl(url){
+  return url.replaceAll(baseUrl,'');
 }
 
 function cleanAtt(e){
@@ -52,6 +71,13 @@ function cleanAtt(e){
   }
   
   return e; 
+}
+async function createScrapeFolder(link){
+  if(isSlug(link)) {
+    if(await io.checkFolderExist( io.path('scrape/articles/'+cleanUrl(link)) ) == false) await io.createFolder( io.path('scrape/articles/'+cleanUrl(link)) );
+  } else {
+    if(await io.checkFolderExist( io.path('scrape/articles/index/'+cleanUrl(link)) ) == false) await io.createFolder( io.path('scrape/articles/index/'+cleanUrl(link)) );
+  }
 }
 
 async function scrapeHome(){
@@ -64,13 +90,29 @@ async function scrapeNavigation(){
   let navigation_clean_string = '';
 
   // raw
-  navigation.forEach((em)=>{ 
+  navigation.forEach(await async function(em){ 
+    
+    const childs = em.children;
+    for(let child of childs){
+      var a = elm.recursiveFind(child, e => { return e.name == 'a'; });
+      if(a !== undefined){
+        if(a.attribs !== undefined){
+          if(a.attribs.href.replaceAll(baseUrl,'') !== '' && a.attribs.href + '/' !== baseUrl){
+            createScrapeFolder(a.attribs.href);
+          }
+        }
+      }
+
+    }
+
+
     navigation_string += '\n\n' + $.html(em);
   })
 
   // clean
   navigation.forEach((menu)=>{
     var li = elm.recursiveApply( menu, cleanAtt );
+
     navigation_clean_string += '\n\n' + $.html(li);
   })
 
@@ -92,7 +134,18 @@ async function scrapeSidebar(){
   sidebar.forEach((menu)=>{
     let title = elm.apply( $('#' + menu.attribs.id).find('.wtitle')[0], cleanAtt );
     let ul = elm.recursiveApply( $('#' + menu.attribs.id).find('ul')[0], cleanAtt );
-  
+
+
+    var childs = $('#' + menu.attribs.id).find('ul')[0].children;
+    for(let child of childs){
+      var a = elm.recursiveFind(child, e =>{ return e.name == 'a'; });
+      if(a !== undefined){
+        if(a.attribs !== undefined){
+          createScrapeFolder(a.attribs.href);
+        }
+      }
+    }
+
     sidebar_clean_string += '\n\n' + $.html(title);
     sidebar_clean_string += '\n' + $.html(ul);
   })
@@ -148,30 +201,64 @@ async function scrapeArticles(){
   var clean_thumbnail_only_str = '<!-- ================= THUMBNAIL ONLY FEEDS ================= -->\n\n';
   var json_thumbnail_only_str = [];
  
-  feeds_thumbnail_only.forEach((e)=>{
+  feeds_thumbnail_only.forEach(await async function (e){
     const childs = e.children;
 
     raw_thumbnail_only_str += $.html(e);
     
     // raw 
-    childs.forEach( (child) => {
+    childs.forEach( await async function (child) {
 
       var img = elm.recursiveFind(child, e =>{ return e.name == 'img'; });
       var a = elm.recursiveFind(child, e =>{ return e.name == 'a'; });
       var title = a.children[0].children[0].data;
       var link = a.attribs.href;
-      console.log(link);
       
-    } )  
+      await createScrapeFolder(link);
+
+    })  
 
     json_thumbnail_only_str.push( elm.recursiveParseJson(e) );
-    clean_thumbnail_only_str += $.html(elm.recursiveApply( e, cleanAtt ));
+    clean_thumbnail_only_str += $.html(elm.recursiveApply( e, cleanAtt )).replaceAll('\n\n\n','\n');
 
   })
 
-  await io.writeFile( io.path('scrape/feeds.html'), raw_thumbnail_only_str); 
-  await io.writeFile( io.path('scrape/feeds_clean.html'), clean_thumbnail_only_str); 
-  await io.writeFile( io.path('scrape/feeds.json'), JSON.stringify( json_thumbnail_only_str, null, 4) );
+  // article
+  var raw_article = '\n\n<!-- ================= ARTICLES FEEDS ================= -->\n\n';
+  var clean_article = '\n\n<!-- ================= ARTICLES FEEDS ================= -->\n\n';
+  var json_article = [];
+
+  feeds_article.forEach(await async function (em){
+    const childs = em.children.filter((v)=>{return v !== undefined});
+
+    raw_article += $.html(em);
+  
+    for(let index in childs){
+      var child = childs[index];
+
+      var img = elm.recursiveFind(child, e =>{ return e.name == 'img'; });
+      var a = elm.recursiveFind(child, e =>{ return e.name == 'a' && elm.recursiveFind(e, (v)=>{return v.name == 'img'}) == undefined; });
+      var title = elm.recursiveFind(child, e =>{ return e.name == 'h3' || e.name == 'a' && childs.length == 2 || e.name == 'h4'; });
+      if(childs.length == 2) title = title.children[0].data;
+      else                   title = title.children[0].children[0].data;
+      var link = a.attribs.href;
+
+      await createScrapeFolder(link);
+
+      if(index == childs.length - 1) break;
+    }
+
+    json_article.push( elm.recursiveParseJson(em) );
+    clean_article += $.html(elm.recursiveApply( em, cleanAtt )).replaceAll('\n\n\n','\n');
+  })
+
+  
+  await io.writeFile( io.path('scrape/feeds.html'), raw_thumbnail_only_str + raw_article); 
+  await io.writeFile( io.path('scrape/feeds_clean.html'), clean_thumbnail_only_str + clean_article); 
+  await io.writeFile( io.path('scrape/feeds.json'), JSON.stringify( [json_thumbnail_only_str, json_article], null, 4) );
+}
+async function scrapeArticle(fetch){
+
 }
 
 const main = async () => {
