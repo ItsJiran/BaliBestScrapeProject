@@ -6,6 +6,10 @@ const format = require('html-format');
 const { checkFolderExist } = require('./utils.io');
 const { recursiveApply } = require('./utils.elm.js');
 
+const axios = require('axios');
+const fs = require('fs');
+const ProgressBar = require('progress');
+
 const falseUrl = 'http://localhost/lifebook';
 const baseUrl = 'https://www.balibestactivities.com/';
 const timestamp = new Date();
@@ -26,13 +30,16 @@ const timestamp = new Date();
 // - Ambil List Artikel 
 // - Ambil List Navigasinya
 
-let scrapper, fetchHome, $, targetArticles,targetImg;
+let scrapper, fetchHome, $, targetArticles,targetImg, targetArticlesFailed, targetImgFailed;
 targetArticles = {
   index:[],
 };
 targetImg = {
   index:[],
 };
+
+targetArticlesFailed = [];
+targetImgFailed = [];
 
 function tranposeToObj(url, obj){
   var tmp = transposeUrl(url);
@@ -179,7 +186,6 @@ async function scrapeSidebar(){
     let title = elm.apply( $('#' + menu.attribs.id).find('.wtitle')[0], cleanAtt );
     let ul = elm.recursiveApply( $('#' + menu.attribs.id).find('ul')[0], cleanAtt );
 
-
     var childs = $('#' + menu.attribs.id).find('ul')[0].children;
     for(let child of childs){
       var a = elm.recursiveFind(child, e =>{ return e.name == 'a'; });
@@ -237,10 +243,6 @@ async function scrapeArticles(){
     else                                        feeds_article_like.push(x);
   }
 
-  // main
-  var raw_main = '';
-  let clean_main = '';
-
   // thumbnail
   var raw_thumbnail_only_str = '<!-- ================= THUMBNAIL ONLY FEEDS ================= -->\n\n';
   var clean_thumbnail_only_str = '<!-- ================= THUMBNAIL ONLY FEEDS ================= -->\n\n';
@@ -260,7 +262,21 @@ async function scrapeArticles(){
       var link = a.attribs.href;
       
       if(link !== undefined ) tranposeToObj(link,targetArticles);
-      if(img !== undefined) tranposeToObj(img.attribs.src,targetImg);
+      if(img !== undefined) {
+
+        if(img.attribs.srcset !== undefined){
+          for(let k of img.attribs.srcset.split(',') ){
+            var us = k.split(' ');
+            for(let result of us){
+              var ext = result.split('.');
+              ext = ext[ext.length-1];
+              if(ext == 'webp' || ext == 'png' || ext == 'jpg') tranposeToObj(result,targetImg);
+            }
+          }
+        }
+        
+        tranposeToObj(img.attribs.src,targetImg);
+      }
 
       await createScrapeFolder(link);
 
@@ -292,7 +308,21 @@ async function scrapeArticles(){
       await createScrapeFolder(link);
 
       if(link !== undefined ) tranposeToObj(link,targetArticles);
-      if(img !== undefined) tranposeToObj(img.attribs.src,targetImg);
+      if(img !== undefined) {
+
+        if(img.attribs.srcset !== undefined){
+          for(let k of img.attribs.srcset.split(',') ){
+            var us = k.split(' ');
+            for(let result of us){
+              var ext = result.split('.');
+              ext = ext[ext.length-1];
+              if(ext == 'webp' || ext == 'png' || ext == 'jpg') tranposeToObj(result,targetImg);
+            }
+          }
+        }
+        
+        tranposeToObj(img.attribs.src,targetImg);
+      }
 
 
       if(index == childs.length - 1) break;
@@ -315,7 +345,21 @@ async function scrapeArticles(){
     var link = a.attribs.href;
 
     if(link !== undefined ) tranposeToObj(link,targetArticles);
-    if(img !== undefined) tranposeToObj(img.attribs.src,targetImg);
+    if(img !== undefined) {
+
+      if(img.attribs.srcset !== undefined){
+        for(let k of img.attribs.srcset.split(',') ){
+          var us = k.split(' ');
+          for(let result of us){
+            var ext = result.split('.');
+            ext = ext[ext.length-1];
+            if(ext == 'webp' || ext == 'png' || ext == 'jpg') tranposeToObj(result,targetImg);
+          }
+        }
+      }
+      
+      tranposeToObj(img.attribs.src,targetImg);
+    }
     
     await createScrapeFolder(link);
   }
@@ -323,11 +367,6 @@ async function scrapeArticles(){
   await io.writeFile( io.path('scrape/feeds.html'), format(raw_thumbnail_only_str + raw_article + raw_article_like)); 
   await io.writeFile( io.path('scrape/feeds_clean.html'), format(clean_thumbnail_only_str + clean_article + clean_article_like)); 
   await io.writeFile( io.path('scrape/feeds.json'), JSON.stringify( [json_thumbnail_only_str, json_article, json_article_like], null, 4) );
-}
-async function scrapeArticle(fetch){
-
-
-  console.log(a.attribs.href);
 }
 async function scrapeFooter(){
   var list = $('#menu-bali-full-day-tours-1')[0];
@@ -362,12 +401,223 @@ async function scrapeRecent(){
   await io.writeFile( io.path('scrape/recent.json'), JSON.stringify( elm.recursiveParseJson(list), null, 4 ) );
 }
 
-function recursiveApplyContent(obj,callback){
+const isObject = (value) => {
+  return !!(value && typeof value === "object" && !Array.isArray(value));
+};
+const isArray = (value) => {
+  return Array.isArray(value);
+};
+const findNestedObject = (object = {}, keyToMatch = "", valueToMatch = "") => {
+  if (isObject(object)) {
+    const entries = Object.entries(object);
 
+    for (let i = 0; i < entries.length; i += 1) {
+      const [objectKey, objectValue] = entries[i];
+
+      if (objectKey === keyToMatch && objectValue === valueToMatch) {
+        return object;
+      }
+
+      if (isObject(objectValue)) {
+        const child = findNestedObject(objectValue, keyToMatch, valueToMatch);
+
+        if (child !== null) {
+          return child;
+        }
+      }
+
+      if(isArray(objectValue)){
+        for(let k = 0; k < objectValue.length; k++){
+          const child = findNestedObject(objectValue[k], keyToMatch, valueToMatch);
+  
+          if (child !== null) {
+            return child;
+          }
+        }
+      }
+    }
+  }
+
+  return null;
+};
+function mapRec(x, fn, obj) {
+
+  if(obj){
+    fn(x);
+    return mapRec(x[1],fn);
+  }
+
+  if (Array.isArray(x)){
+    var new_arr = [];
+
+    for(let k in x){
+      var v = x[k];
+      new_arr.push( mapRec(v,fn) );
+    }
+    
+    x = new_arr;
+    return x;
+  }
+  
+  if (x && typeof x === 'object'){
+    
+    for(let k in x){
+      var v = x[k];
+      x[k] = mapRec([k,v], fn, true);
+    }
+      
+    return x;
+  }
+
+  return fn(x);
+}
+async function asyncMapRec(x, fn, obj) {
+
+  if(obj){
+    await fn(x);
+    return await asyncMapRec(x[1],fn);
+  }
+
+  if (Array.isArray(x)){
+    var new_arr = [];
+
+    for(let k in x){
+      var v = x[k];
+      new_arr.push( await asyncMapRec(v,fn) );
+    }
+    
+    x = new_arr;
+    return x;
+  }
+  
+  if (x && typeof x === 'object'){
+    
+    for(let k in x){
+      var v = x[k];
+      x[k] = await asyncMapRec([k,v], fn, true);
+    }
+      
+    return x;
+  }
+
+  return await fn(x);
+}
+
+
+async function scrapeArticle(url){
+  const obj = transposeUrl(url);
+  var file_path = '';
+  var file_name = obj.end + '.html';
+  if(obj.slug !== undefined) file_path = io.path('scrape/articles/' + obj.slug + obj.end + '/');
+  else                       file_path = io.path('scrape/articles/index/' + obj.end + '/');
+
+  try{
+    var writer = fs.createWriteStream(file_path + file_name);
+
+    console.log('------------ Download Article : ',obj.end);
+  
+    await axios({
+      method: 'get',
+      url: url,
+      responseType: 'stream',
+    }).then(response => {
+  
+      //ensure that the user can call `then()` only when the file has
+      //been downloaded entirely.
+  
+      response.data.on('data',(chunk)=>{ console.log('Received Data : ', chunk.length) });
+  
+      return new Promise((resolve, reject) => {
+        response.data.pipe(writer);
+        let error = null;
+        writer.on('error', err => {
+          error = err;
+          writer.close();
+          reject(err);
+        });
+        writer.on('close', () => {
+          if (!error) {
+            resolve(true);
+          }
+          //no need to call the reject here, as it will have been called in the
+          //'error' stream;
+        });
+      });
+  
+    });
+    
+    console.log('Articles Download Finished : ', obj.end); 
+    var html = await cheerio.load((await io.readFile(file_path+file_name)));
+    var content = html('#content .mg-card-box.padding-20')[0];
+  
+    elm.recursiveApply(content, (e)=>{ 
+      if(e.name == 'img') {
+        var img = e;
+  
+        if(img.attribs.srcset !== undefined){
+          for(let k of img.attribs.srcset.split(',') ){
+            var us = k.split(' ');
+            for(let result of us){
+              var ext = result.split('.');
+              ext = ext[ext.length-1];
+              if(ext == 'webp' || ext == 'png' || ext == 'jpg') tranposeToObj(result,targetImg);
+            }
+          }
+        }
+        
+        tranposeToObj(img.attribs.src,targetImg);
+      }
+    })
+  
+    await io.writeFile( file_path + 'raw_' + file_name, format(html.html(content)) );
+    await io.writeFile( file_path + 'clean_' + file_name, format(html.html(elm.recursiveApply( content, cleanAtt ))) );
+  } catch (e) {
+    targetArticlesFailed.push({
+      url:obj,
+      err:e,
+    })
+  }
+}
+async function scrapeImg(url){
+  const obj = transposeUrl(url);
+  // var writer = undefined;
+  var file_path = io.path('scrape/' + obj.slug);
+  var file_name = obj.end;
+
+  try{
+    if(await io.checkFolderExist(file_path) == false) await io.createFolder(file_path);
+
+    console.log('------------ Download Image : ',obj.end);
+
+    const writer = fs.createWriteStream(file_path + file_name);
+
+    const response = await axios({
+      url,
+      method: 'GET',
+      responseType: 'stream'
+    })
+
+    response.data.pipe(writer)
+
+    return new Promise((resolve, reject) => {
+    
+      console.log('Image Download Finished : ', obj.end); 
+      
+      writer.on('finish', resolve)
+      writer.on('error', reject)
+    })
+  } catch (e) {
+    targetImgFailed.push({
+      url:obj,
+      err:e,
+    })
+  }
 }
 
 const main = async () => {
   try{
+
+    console.clear();
 
     // MAIN FETCH
     await initialize();
@@ -380,13 +630,41 @@ const main = async () => {
     
     // SECOND FETCH
     // 1. Fetching All The HTML File
-    // 2. Assign All The
+    // 2. Transporse All The IMG Aquired during fetching to TargetImg variable
+    //await scrapeArticle('https://www.balibestactivities.com/bali-full-day-tour/bedugul-and-tanah-lot-tours');
+
+    await asyncMapRec( targetArticles, await async function (e){ 
+      // Implement Fetching Articles HTML FILE
+      
+      if(Array.isArray(e) && e[0] == 'ori'){
+          await scrapeArticle(e[1]);
+      }
+
+      return e; // important so the original target img not vanish;
+    });
+
+    //await scrapeImg('https://www.balibestactivities.com/wp-content/uploads/2016/04/Bali-Diving-200x120.jpg');
+
+    await asyncMapRec( targetImg, await async function (e){ 
+      // Implement Fetching Images
+
+      if(Array.isArray(e) && e[0] == 'ori'){
+        await scrapeImg(e[1]);
+      }
+
+      return e; // important so the original target img not vanish;
+    });
+
+
 
     // LAST TIME FETCH
+    await io.writeFile( io.path('scrape/targets_articles_failed.json'), JSON.stringify( targetArticlesFailed, null, 4 ) );
+    await io.writeFile( io.path('scrape/targets_img_failed.json'), JSON.stringify( targetImgFailed, null, 4 ) );
     await io.writeFile( io.path('scrape/targets_articles.json'), JSON.stringify( targetArticles, null, 4 ) );
     await io.writeFile( io.path('scrape/targets_img.json'), JSON.stringify( targetImg, null, 4 ) );
     await io.writeFile( io.path('scrape/log.txt'), 'Last Fetch : ' + timestamp.toString() );
 
+    console.log('end');
   } catch(e) {
   	console.error(e);
   }
