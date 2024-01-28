@@ -14,22 +14,6 @@ const falseUrl = 'http://localhost/lifebook';
 const baseUrl = 'https://www.balibestactivities.com/';
 const timestamp = new Date();
 
-// Sistem Simpan Filenya
-// - Non Html Formated Text Tapi Terstruktur misalnya navigasi
-// - Html Formated File
-// - Log ( Kapan Terakhir Fetch ) 
-
-// 0.Buat List Url Yang Ingin Di Fetch ( BASED ON HOMEPAGE ) 
-// - Ambil List Artikel 
-// - Ambil List Navigasinya
-// - Ambil List N
-
-// 0.1 Buat Raw File Nya ( misal navigasi [title:l] )
-
-// 1.Fetch Homepage Url
-// - Ambil List Artikel 
-// - Ambil List Navigasinya
-
 let scrapper, fetchHome, $, targetArticles,targetImg, targetArticlesFailed, targetImgFailed;
 targetArticles = {
   index:[],
