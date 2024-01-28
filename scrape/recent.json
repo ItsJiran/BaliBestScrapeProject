@@ -1,0 +1,166 @@
+{
+    "type": "tag",
+    "name": "ul",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "children": [
+        {
+            "type": "text",
+            "data": "\n\t\t\t\t\t\t\t\t\t\t\t"
+        },
+        {
+            "type": "tag",
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "text",
+                    "data": "\n\t\t\t\t\t"
+                },
+                {
+                    "type": "tag",
+                    "name": "a",
+                    "href": "https://www.balibestactivities.com/bali-best-activities/sea-food-romantic-dinner.html",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "Seafood Romantic Dinner"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "data": "\n\t\t\t\t\t\t\t\t\t"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "data": "\n\t\t\t\t\t\t\t\t\t\t\t"
+        },
+        {
+            "type": "tag",
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "text",
+                    "data": "\n\t\t\t\t\t"
+                },
+                {
+                    "type": "tag",
+                    "name": "a",
+                    "href": "https://www.balibestactivities.com/bali-best-activities/bali-elephant-ride-and-water-rafting-tours.html",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "Bali Elephant Ride and Water Rafting Tours"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "data": "\n\t\t\t\t\t\t\t\t\t"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "data": "\n\t\t\t\t\t\t\t\t\t\t\t"
+        },
+        {
+            "type": "tag",
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "text",
+                    "data": "\n\t\t\t\t\t"
+                },
+                {
+                    "type": "tag",
+                    "name": "a",
+                    "href": "https://www.balibestactivities.com/bali-best-activities/bali-itinerary-5-days-4-nights.html",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "Bali Itinerary 5 Days 4 Nights"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "data": "\n\t\t\t\t\t\t\t\t\t"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "data": "\n\t\t\t\t\t\t\t\t\t\t\t"
+        },
+        {
+            "type": "tag",
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "text",
+                    "data": "\n\t\t\t\t\t"
+                },
+                {
+                    "type": "tag",
+                    "name": "a",
+                    "href": "https://www.balibestactivities.com/bali-best-activities/lovina-tours.html",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "Lovina Tours"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "data": "\n\t\t\t\t\t\t\t\t\t"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "data": "\n\t\t\t\t\t\t\t\t\t\t\t"
+        },
+        {
+            "type": "tag",
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "children": [
+                {
+                    "type": "text",
+                    "data": "\n\t\t\t\t\t"
+                },
+                {
+                    "type": "tag",
+                    "name": "a",
+                    "href": "https://www.balibestactivities.com/bali-best-activities/bali-handara-heaven-gate-tour.html",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "Bali Handara Heaven Gate Tour"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "data": "\n\t\t\t\t\t\t\t\t\t"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "data": "\n\t\t\t\t\t"
+        }
+    ]
+}

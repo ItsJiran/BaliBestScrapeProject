@@ -1,0 +1,47 @@
+[
+    {
+        "url": {
+            "slug": "wp-content/uploads/2019/11/",
+            "end": "Blue-Lagoon-Snorkeling.jpg",
+            "ori": "https://www.balibestactivities.com/wp-content/uploads/2019/11/Blue-Lagoon-Snorkeling.jpg"
+        },
+        "err": {
+            "message": "Request failed with status code 404",
+            "name": "AxiosError",
+            "stack": "AxiosError: Request failed with status code 404\n    at settle (/run/media/itsjiran/HDD 1 Terra Boys/Folder Gilang/Folder Project Karya/Project Coding/Folder Project/230928_WebscrapingBali/node_modules/axios/dist/node/axios.cjs:1913:12)\n    at RedirectableRequest.handleResponse (/run/media/itsjiran/HDD 1 Terra Boys/Folder Gilang/Folder Project Karya/Project Coding/Folder Project/230928_WebscrapingBali/node_modules/axios/dist/node/axios.cjs:2943:9)\n    at RedirectableRequest.emit (node:events:512:28)\n    at RedirectableRequest._processResponse (/run/media/itsjiran/HDD 1 Terra Boys/Folder Gilang/Folder Project Karya/Project Coding/Folder Project/230928_WebscrapingBali/node_modules/follow-redirects/index.js:368:10)\n    at RedirectableRequest._onNativeResponse (/run/media/itsjiran/HDD 1 Terra Boys/Folder Gilang/Folder Project Karya/Project Coding/Folder Project/230928_WebscrapingBali/node_modules/follow-redirects/index.js:65:10)\n    at Object.onceWrapper (node:events:627:26)\n    at ClientRequest.emit (node:events:512:28)\n    at HTTPParser.parserOnIncomingClient (node:_http_client:693:27)\n    at HTTPParser.parserOnHeadersComplete (node:_http_common:119:17)\n    at TLSSocket.socketOnData (node:_http_client:535:22)",
+            "config": {
+                "transitional": {
+                    "silentJSONParsing": true,
+                    "forcedJSONParsing": true,
+                    "clarifyTimeoutError": false
+                },
+                "adapter": [
+                    "xhr",
+                    "http"
+                ],
+                "transformRequest": [
+                    null
+                ],
+                "transformResponse": [
+                    null
+                ],
+                "timeout": 0,
+                "xsrfCookieName": "XSRF-TOKEN",
+                "xsrfHeaderName": "X-XSRF-TOKEN",
+                "maxContentLength": -1,
+                "maxBodyLength": -1,
+                "env": {},
+                "headers": {
+                    "Accept": "application/json, text/plain, */*",
+                    "User-Agent": "axios/1.5.1",
+                    "Accept-Encoding": "gzip, compress, deflate, br"
+                },
+                "url": "https://www.balibestactivities.com/wp-content/uploads/2019/11/Blue-Lagoon-Snorkeling.jpg",
+                "method": "get",
+                "responseType": "stream"
+            },
+            "code": "ERR_BAD_REQUEST",
+            "status": 404
+        }
+    }
+]

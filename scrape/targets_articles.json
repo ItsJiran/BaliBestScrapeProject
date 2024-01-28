@@ -1,0 +1,514 @@
+{
+    "index": [
+        {
+            "end": "about-us",
+            "ori": "https://www.balibestactivities.com/about-us"
+        },
+        {
+            "end": "bali-tours",
+            "ori": "https://www.balibestactivities.com/bali-tours"
+        },
+        {
+            "end": "bali-airport-transfer",
+            "ori": "https://www.balibestactivities.com/bali-airport-transfer"
+        },
+        {
+            "end": "booking-contact",
+            "ori": "https://www.balibestactivities.com/booking-contact"
+        },
+        {
+            "end": "bali-handara-gate-tour-package",
+            "ori": "https://www.balibestactivities.com/bali-handara-gate-tour-package"
+        },
+        {
+            "end": "bali-tour-package-bali-handara-gate",
+            "ori": "https://www.balibestactivities.com/bali-tour-package-bali-handara-gate"
+        },
+        {
+            "end": "east-bali-tour-package",
+            "ori": "https://www.balibestactivities.com/east-bali-tour-package"
+        },
+        {
+            "end": "banyumala-waterfall-tour",
+            "ori": "https://www.balibestactivities.com/banyumala-waterfall-tour"
+        },
+        {
+            "end": "jatiluwih-tour-package",
+            "ori": "https://www.balibestactivities.com/jatiluwih-tour-package"
+        },
+        {
+            "end": "bali-trekking",
+            "ori": "https://www.balibestactivities.com/bali-trekking"
+        },
+        {
+            "end": "parasailing-adventure-and-bali-atv-ride",
+            "ori": "https://www.balibestactivities.com/parasailing-adventure-and-bali-atv-ride"
+        },
+        {
+            "end": "taro-elephant-ride-and-atv-ride-adventure-tour",
+            "ori": "https://www.balibestactivities.com/taro-elephant-ride-and-atv-ride-adventure-tour"
+        },
+        {
+            "end": "bali-atv-ride-and-ayung-rafting-adventure",
+            "ori": "https://www.balibestactivities.com/bali-atv-ride-and-ayung-rafting-adventure"
+        },
+        {
+            "end": "water-rafting-and-bali-atv-ride-adventure",
+            "ori": "https://www.balibestactivities.com/water-rafting-and-bali-atv-ride-adventure"
+        },
+        {
+            "end": "bali-ocean-walker-and-atv-ride-adventure",
+            "ori": "https://www.balibestactivities.com/bali-ocean-walker-and-atv-ride-adventure"
+        },
+        {
+            "end": "bali-quad-bike-adventure-and-bali-safari-marine-park-tour",
+            "ori": "https://www.balibestactivities.com/bali-quad-bike-adventure-and-bali-safari-marine-park-tour"
+        },
+        {
+            "end": "mount-batur-sunrise-trekking-packages",
+            "ori": "https://www.balibestactivities.com/mount-batur-sunrise-trekking-packages"
+        },
+        {
+            "end": "sekumpul-waterfall-trekking-package",
+            "ori": "https://www.balibestactivities.com/sekumpul-waterfall-trekking-package"
+        },
+        {
+            "end": "nusa-penida-east-tour-package",
+            "ori": "https://www.balibestactivities.com/nusa-penida-east-tour-package"
+        },
+        {
+            "end": "nusa-penida-cheapest-snorkeling-tours",
+            "ori": "https://www.balibestactivities.com/nusa-penida-cheapest-snorkeling-tours"
+        },
+        {
+            "end": "nusa-penida-west-tour-package",
+            "ori": "https://www.balibestactivities.com/nusa-penida-west-tour-package"
+        },
+        {
+            "end": "lembongan-tour-packages",
+            "ori": "https://www.balibestactivities.com/lembongan-tour-packages"
+        },
+        {
+            "end": "lembongan-2-days-1-night-tour-package",
+            "ori": "https://www.balibestactivities.com/lembongan-2-days-1-night-tour-package"
+        },
+        {
+            "end": "lembongan-1-day-tours",
+            "ori": "https://www.balibestactivities.com/lembongan-1-day-tours"
+        },
+        {
+            "end": "nusa-penida-sightseeing-and-snorkeling-packages",
+            "ori": "https://www.balibestactivities.com/nusa-penida-sightseeing-and-snorkeling-packages"
+        },
+        {
+            "end": "bali-tour-packages-2-days-1-night-tours",
+            "ori": "https://www.balibestactivities.com/bali-tour-packages-2-days-1-night-tours"
+        },
+        {
+            "end": "bali-tour-packages-3-days-2-nights",
+            "ori": "https://www.balibestactivities.com/bali-tour-packages-3-days-2-nights"
+        },
+        {
+            "end": "bali-tour-packages-4-days-and-3-nights",
+            "ori": "https://www.balibestactivities.com/bali-tour-packages-4-days-and-3-nights"
+        },
+        {
+            "end": "bali-tour-package-5-days-4-nights",
+            "ori": "https://www.balibestactivities.com/bali-tour-package-5-days-4-nights"
+        },
+        {
+            "end": "bali-tour-package-6-days-5-nights",
+            "ori": "https://www.balibestactivities.com/bali-tour-package-6-days-5-nights"
+        },
+        {
+            "end": "bali-tour-packages-7-days-6-nights",
+            "ori": "https://www.balibestactivities.com/bali-tour-packages-7-days-6-nights"
+        },
+        {
+            "end": "bali-tour-packages-8-days-7-nights",
+            "ori": "https://www.balibestactivities.com/bali-tour-packages-8-days-7-nights"
+        },
+        {
+            "end": "bali-tour-packages-9-days-8-nights",
+            "ori": "https://www.balibestactivities.com/bali-tour-packages-9-days-8-nights"
+        },
+        {
+            "end": "bali-tour-package-10-days-9-nights",
+            "ori": "https://www.balibestactivities.com/bali-tour-package-10-days-9-nights"
+        },
+        {
+            "end": "bali-honeymoon-package-3-days-2nights",
+            "ori": "https://www.balibestactivities.com/bali-honeymoon-package-3-days-2nights"
+        },
+        {
+            "end": "bali-honeymoon-package-5-days-4-nights",
+            "ori": "https://www.balibestactivities.com/bali-honeymoon-package-5-days-4-nights"
+        },
+        {
+            "end": "bali-honeymoon-package-4-days-and-3-nights",
+            "ori": "https://www.balibestactivities.com/bali-honeymoon-package-4-days-and-3-nights"
+        },
+        {
+            "end": "bali-honeymoon-package-6-days-5-nights",
+            "ori": "https://www.balibestactivities.com/bali-honeymoon-package-6-days-5-nights"
+        },
+        {
+            "end": "bali-honeymoon-package-7-days-6-nights",
+            "ori": "https://www.balibestactivities.com/bali-honeymoon-package-7-days-6-nights"
+        },
+        {
+            "end": "bali-honeymoon-trip-8-days-7-nights",
+            "ori": "https://www.balibestactivities.com/bali-honeymoon-trip-8-days-7-nights"
+        },
+        {
+            "end": "mount-batur-sunrise-trekking-packages",
+            "ori": "https://www.balibestactivities.com/mount-batur-sunrise-trekking-packages"
+        },
+        {
+            "end": "bali-atv-ride-tour",
+            "ori": "https://www.balibestactivities.com/bali-atv-ride-tour"
+        },
+        {
+            "end": "bali-rafting-and-down-hill-cycling-tour",
+            "ori": "https://www.balibestactivities.com/bali-rafting-and-down-hill-cycling-tour"
+        },
+        {
+            "end": "batur-sunrise-trekking-and-hot-spring-tour",
+            "ori": "https://www.balibestactivities.com/batur-sunrise-trekking-and-hot-spring-tour"
+        },
+        {
+            "end": "mount-batur-sunrise-jeep-tour",
+            "ori": "https://www.balibestactivities.com/mount-batur-sunrise-jeep-tour"
+        },
+        {
+            "end": "parasailing-adventure-and-bali-atv-ride",
+            "ori": "https://www.balibestactivities.com/parasailing-adventure-and-bali-atv-ride"
+        },
+        {
+            "end": "taro-elephant-ride-and-atv-ride-adventure-tour",
+            "ori": "https://www.balibestactivities.com/taro-elephant-ride-and-atv-ride-adventure-tour"
+        },
+        {
+            "end": "bali-atv-ride-and-ayung-rafting-adventure",
+            "ori": "https://www.balibestactivities.com/bali-atv-ride-and-ayung-rafting-adventure"
+        },
+        {
+            "end": "white-water-rafting-and-bali-jungle-buggies-adventure",
+            "ori": "https://www.balibestactivities.com/white-water-rafting-and-bali-jungle-buggies-adventure"
+        },
+        {
+            "end": "bali-ocean-walker-and-atv-ride-adventure",
+            "ori": "https://www.balibestactivities.com/bali-ocean-walker-and-atv-ride-adventure"
+        },
+        {
+            "end": "bali-tour-packages-4-days-and-3-nights",
+            "ori": "https://www.balibestactivities.com/bali-tour-packages-4-days-and-3-nights"
+        },
+        {
+            "end": "bali-tour-packages-2-days-1-night-tours",
+            "ori": "https://www.balibestactivities.com/bali-tour-packages-2-days-1-night-tours"
+        },
+        {
+            "end": "bali-airport-transfer",
+            "ori": "https://www.balibestactivities.com/bali-airport-transfer"
+        },
+        {
+            "end": "bali-combination-tours",
+            "ori": "https://www.balibestactivities.com/bali-combination-tours"
+        },
+        {
+            "end": "bali-full-day-tour",
+            "ori": "https://www.balibestactivities.com/bali-full-day-tour"
+        },
+        {
+            "end": "visit-nusa-penida-one-day-tour",
+            "ori": "https://www.balibestactivities.com/visit-nusa-penida-one-day-tour"
+        },
+        {
+            "end": "bali-handara-gate-tour-package",
+            "ori": "https://www.balibestactivities.com/bali-handara-gate-tour-package"
+        },
+        {
+            "end": "bali-tour-package-bali-handara-gate",
+            "ori": "https://www.balibestactivities.com/bali-tour-package-bali-handara-gate"
+        },
+        {
+            "end": "east-bali-tour-package",
+            "ori": "https://www.balibestactivities.com/east-bali-tour-package"
+        },
+        {
+            "end": "banyumala-waterfall-tour",
+            "ori": "https://www.balibestactivities.com/banyumala-waterfall-tour"
+        },
+        {
+            "end": "jatiluwih-tour-package",
+            "ori": "https://www.balibestactivities.com/jatiluwih-tour-package"
+        }
+    ],
+    "bali-full-day-tour": {
+        "content": [
+            {
+                "slug": "bali-full-day-tour/",
+                "end": "bali-dolpin-tours",
+                "ori": "https://www.balibestactivities.com/bali-full-day-tour/bali-dolpin-tours"
+            },
+            {
+                "slug": "bali-full-day-tour/",
+                "end": "north-bali-tours",
+                "ori": "https://www.balibestactivities.com/bali-full-day-tour/north-bali-tours"
+            },
+            {
+                "slug": "bali-full-day-tour/",
+                "end": "kintamani-tour",
+                "ori": "https://www.balibestactivities.com/bali-full-day-tour/kintamani-tour"
+            },
+            {
+                "slug": "bali-full-day-tour/",
+                "end": "bedugul-and-tanah-lot-tours",
+                "ori": "https://www.balibestactivities.com/bali-full-day-tour/bedugul-and-tanah-lot-tours"
+            },
+            {
+                "slug": "bali-full-day-tour/",
+                "end": "kintamani-and-ubud-tours",
+                "ori": "https://www.balibestactivities.com/bali-full-day-tour/kintamani-and-ubud-tours"
+            },
+            {
+                "slug": "bali-full-day-tour/",
+                "end": "besakih-temple-tours",
+                "ori": "https://www.balibestactivities.com/bali-full-day-tour/besakih-temple-tours"
+            },
+            {
+                "slug": "bali-full-day-tour/",
+                "end": "denpasar-and-uluwatu-tours",
+                "ori": "https://www.balibestactivities.com/bali-full-day-tour/denpasar-and-uluwatu-tours"
+            },
+            {
+                "slug": "bali-full-day-tour/",
+                "end": "denpasar-and-tanah-lot-temple-tours",
+                "ori": "https://www.balibestactivities.com/bali-full-day-tour/denpasar-and-tanah-lot-temple-tours"
+            },
+            {
+                "slug": "bali-full-day-tour/",
+                "end": "ubud-and-uluwatu-tours",
+                "ori": "https://www.balibestactivities.com/bali-full-day-tour/ubud-and-uluwatu-tours"
+            },
+            {
+                "slug": "bali-full-day-tour/",
+                "end": "ubud-and-tanah-lot-tour",
+                "ori": "https://www.balibestactivities.com/bali-full-day-tour/ubud-and-tanah-lot-tour"
+            },
+            {
+                "slug": "bali-full-day-tour/",
+                "end": "lempuyang-temple-tour-package",
+                "ori": "https://www.balibestactivities.com/bali-full-day-tour/lempuyang-temple-tour-package"
+            }
+        ]
+    },
+    "bali-half-day-tour": {
+        "content": [
+            {
+                "slug": "bali-half-day-tour/",
+                "end": "bali-ubud-tours",
+                "ori": "https://www.balibestactivities.com/bali-half-day-tour/bali-ubud-tours"
+            },
+            {
+                "slug": "bali-half-day-tour/",
+                "end": "spa-and-sunset-dinner-tour",
+                "ori": "https://www.balibestactivities.com/bali-half-day-tour/spa-and-sunset-dinner-tour"
+            }
+        ]
+    },
+    "bali-best-activities": {
+        "content": [
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-surf-lesson-2",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-surf-lesson-2"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-sea-walker-2",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-sea-walker-2"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-horse-riding-2",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-horse-riding-2"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-hai-cruise-2",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-hai-cruise-2"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-cooking-class-3",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-cooking-class-3"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-bird-park-2",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-bird-park-2"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-cycling-tour-2",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-cycling-tour-2"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-spa",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-spa"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-zoo",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-zoo"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-water-sport",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-water-sport"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-safari-park",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-safari-park"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-rafting",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-rafting"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-diving",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-diving"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-vw-safari-tour",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-vw-safari-tour"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-dolphin",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-dolphin"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "sekumpul-trekking-and-ulun-danu-temple-tour.html",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/sekumpul-trekking-and-ulun-danu-temple-tour.html"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "ubud-tours-and-elephant-ride.html",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/ubud-tours-and-elephant-ride.html"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "ayung-rafting-and-ubud-tour.html",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/ayung-rafting-and-ubud-tour.html"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "telaga-waja-rafting-and-besakih-tour.html",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/telaga-waja-rafting-and-besakih-tour.html"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "horse-riding-and-jatiluwih-tour.html",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/horse-riding-and-jatiluwih-tour.html"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "ayung-rafting-and-tanah-lot-temple.html",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/ayung-rafting-and-tanah-lot-temple.html"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "water-sport-and-uluwatu-temple-tour.html",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/water-sport-and-uluwatu-temple-tour.html"
+            },
+            {
+                "slug": "bali-best-activities/",
+                "end": "bali-underwater-scooter",
+                "ori": "https://www.balibestactivities.com/bali-best-activities/bali-underwater-scooter"
+            }
+        ]
+    },
+    "bali-combination-tours": {
+        "content": [
+            {
+                "slug": "bali-combination-tours/",
+                "end": "bali-swing-and-ayung-rafting-tour",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/bali-swing-and-ayung-rafting-tour"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "bali-water-rafting-elephant-ride-tour",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/bali-water-rafting-elephant-ride-tour"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "bali-safari-park-and-snockling-tour",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/bali-safari-park-and-snockling-tour"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "tamblingan-trekking-tanah-lot-tour",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/tamblingan-trekking-tanah-lot-tour"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "munduk-trekking-and-tanah-lot-tour",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/munduk-trekking-and-tanah-lot-tour"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "batur-trekking-and-ubud-tour",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/batur-trekking-and-ubud-tour"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "bali-zoo-and-uluwatu-tours",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/bali-zoo-and-uluwatu-tours"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "bali-water-sports-and-uluwatu-tour",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/bali-water-sports-and-uluwatu-tour"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "bali-rafting-and-ubud-tour",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/bali-rafting-and-ubud-tour"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "bali-rafting-and-besakih-tours",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/bali-rafting-and-besakih-tours"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "bali-elephant-ride-and-ubud-tours",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/bali-elephant-ride-and-ubud-tours"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "bali-horse-riding-and-jatiluwih-tour",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/bali-horse-riding-and-jatiluwih-tour"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "bali-rafting-and-sunset-tour",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/bali-rafting-and-sunset-tour"
+            },
+            {
+                "slug": "bali-combination-tours/",
+                "end": "bali-swing-and-uluwatu-temple-tour",
+                "ori": "https://www.balibestactivities.com/bali-combination-tours/bali-swing-and-uluwatu-temple-tour"
+            }
+        ]
+    }
+}
